@@ -1,4 +1,4 @@
-##Weather App
+## Weather App
 
 This app is built to track the 5-day weather forecast of different cities using React.js.
 
