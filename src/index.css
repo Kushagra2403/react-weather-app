@@ -11,30 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-.img {
-  height: 160px;
-  padding: 10px 10px;
-  display: flex;
-  justify-content: center;
-}
-
-.single-day h2 {
-  text-align: center;
-}
-
-.single-day p {
-  font-size: 24px;
-  text-align: center;
-  margin: 10px 0;
-}
-
-h3 {
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.single-day h4 {
-  text-align: center;
-  font-size: 25px;
-}

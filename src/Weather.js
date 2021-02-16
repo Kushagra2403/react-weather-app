@@ -18,7 +18,7 @@ const Weather = () => {
       const response = await fetch(url);
       const data = await response.json();
       setWeatherObj(data);
-      console.log(data.list);
+      console.log(data);
       setLoading(false);
     } catch (error) {
       console.log(error);
@@ -33,6 +33,19 @@ const Weather = () => {
 
   if (loading) {
     return <h1>Loading...</h1>;
+  } else if (weatherObj.cod == 404) {
+    return (
+      <>
+        <h2 id="notfound">City Not Found</h2>
+        <form className="form">
+          <label htmlFor="city">Enter City Name:</label>
+          <input type="text" name="city" ref={city} />
+          <button type="submit" onClick={handleSubmit}>
+            View
+          </button>
+        </form>
+      </>
+    );
   } else
     return (
       <>
@@ -43,6 +56,7 @@ const Weather = () => {
             View
           </button>
         </form>
+        <h3 id="current-city">Showing weather for {target}</h3>
         <div className="container">
           <SingleDay weatherObj={weatherObj.list[0]} />
           <SingleDay weatherObj={weatherObj.list[8]} />

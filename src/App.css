@@ -15,6 +15,7 @@ body {
   position: absolute;
   left: 50%;
   top: 10%;
+  width: 100%;
   transform: translateX(-50%);
 }
 
@@ -24,15 +25,26 @@ h1 {
   font-weight: 100;
 }
 
+#current-city {
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 100;
+  line-height: 40px;
+}
+
 form {
-  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 0;
   width: 50%;
   min-height: 100px;
 }
 
 form label {
-  margin: 10px 35px;
-  height: 34px;
+  margin: 10px 20px;
+  height: 38px;
+  line-height: 38px;
   font-size: 22px;
   font-weight: 100;
 }
@@ -40,8 +52,9 @@ form label {
 form input {
   height: 38px;
   font-size: 20px;
-  width: 230px;
+  width: 300px;
   padding: 0 5px;
+  margin: 10px 20px;
   outline: none;
 }
 
@@ -49,8 +62,8 @@ form button {
   width: 70px;
   height: 38px;
   line-height: 38px;
+  margin: 10px 20px;
   font-size: 18px;
-  margin: 15px 40px;
   border: none;
   background-color: #9fbcd1;
   color: #222;
@@ -65,7 +78,16 @@ form button:hover {
 .container {
   display: flex;
   width: 1400px;
+  margin: 0 auto;
   justify-content: space-between;
+}
+
+#notfound {
+  display: block;
+  text-align: center;
+  line-height: 100px;
+  font-weight: 100;
+  font-size: 36px;
 }
 
 .single-day {
@@ -80,7 +102,30 @@ form button:hover {
   border-radius: 15px;
 }
 
+.single-day h2 {
+  text-align: center;
+}
+
+.single-day p {
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 0;
+}
+
 .single-day h3 {
   line-height: 35px;
   font-size: 18px;
+  font-weight: 400;
+}
+
+.single-day h4 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.img {
+  height: 160px;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
 }
