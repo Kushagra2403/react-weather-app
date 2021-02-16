@@ -9,6 +9,7 @@ const SingleDay = ({ weatherObj }) => {
   var myDate = new Date(weatherObj.dt * 1000);
   const date = myDate.toDateString();
   const main = weatherObj.weather[0].main;
+  const wind = weatherObj.wind.speed;
 
   const Icon = ({ main }) => {
     if (main === "Rain") return <WiRain size={140} />;
@@ -23,11 +24,11 @@ const SingleDay = ({ weatherObj }) => {
       <div className="img">
         <Icon main={main} />
       </div>
-      <h3>Temperature: {temp} F</h3>
-      <h3>Pressure: {pressure / 1000} atm</h3>
-      <h3>Humidity: {humidity} % </h3>
-      {/* <h3>Wind Speed: </h3> */}
+      <h4>{temp}C</h4>
       <p>{desc}</p>
+      <h3>Pressure: {pressure / 1000} atm</h3>
+      <h3>Humidity: {humidity}% </h3>
+      <h3>Wind Speed: {wind} km/h </h3>
     </div>
   );
 };

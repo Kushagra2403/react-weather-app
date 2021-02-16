@@ -7,11 +7,11 @@ const Weather = () => {
   const city = useRef("");
   const [target, setTarget] = useState("London");
 
-  const url = `https://api.openweathermap.org/data/2.5/forecast?q=Delhi&cnt=40&appid=${process.env.REACT_APP_API_KEY}`;
+  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${target}&cnt=40&units=metric&appid=${process.env.REACT_APP_API_KEY}`;
 
   useEffect(() => {
     fetchWeather();
-  }, [city]);
+  }, [target]);
 
   const fetchWeather = async () => {
     try {
